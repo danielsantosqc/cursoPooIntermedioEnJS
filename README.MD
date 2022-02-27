@@ -1,1 +1,1 @@
-aqui iniciamos el curso de POO en JavaScript Intermedio 
+aqui iniciamos el curso Intermedio  de POO en JavaScript 
