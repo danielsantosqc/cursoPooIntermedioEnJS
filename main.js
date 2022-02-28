@@ -9,15 +9,22 @@ const daniel = {
         this.approveCourses.push(newCourse);
     }
 };
-// console.log("keys");
-// console.log(Object.keys(daniel));
-// console.log("getOwnPropertyNames");
-// console.log(Object.getOwnPropertyNames(daniel));
-// console.log("entries");
-// console.log(Object.entries(daniel));
+ 
+// metodos estaticos, quiere decir que no necesitamos instanciar la clase para 
+// tener acceso a los metodos dentro de ella,
+// los diguientes son metodos estaticos por defecto del prototipo Object.
+// init here 
+console.log("keys");
+console.log(Object.keys(daniel));
+console.log("getOwnPropertyNames");
+console.log(Object.getOwnPropertyNames(daniel));
+console.log("entries");
+console.log(Object.entries(daniel));
+// end here 
 
 
-
+// propiedades del prototipo Object. encapsulamient con los metodos 
+// enumerable, writable, configurable 
 Object.defineProperty(daniel, "navigator", {
     value: "Chrome",
     enumerable:false,
