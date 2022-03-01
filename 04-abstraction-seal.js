@@ -50,7 +50,7 @@ const studentBase = {
 
 // Abstracción con objetos literales y deep copy
 Object.isSealed()
-El método **Object.isSealed()** si el objeto está sellado.
+// El método **Object.isSealed()** si el objeto está sellado.
 
 // Devuelve true si el objeto está sellado, de lo contrario devuelve false. Un objeto está sellado si no es extensible y si todas sus propiedades no se pueden configurar y por lo tanto no removibles (pero no necesariamente no modificables).
 
