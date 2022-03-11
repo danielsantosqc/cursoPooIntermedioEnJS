@@ -1,3 +1,5 @@
+//FACTORY PATTERN Y RORO
+
 function requiredParam(param) {
 throw new Error(param + " es obligatorio");
 }

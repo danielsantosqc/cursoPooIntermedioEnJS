@@ -14,7 +14,8 @@ function createStudent({
   facebook,
   approvedCourses = [],
   learningPaths = [],
-} = {}) {
+} = {}) 
+{
   const private = {
     "_name": name,
   };
