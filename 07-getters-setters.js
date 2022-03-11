@@ -33,12 +33,19 @@ function createStudent({
     // changeName(newName) {
     //   private["_name"] = newName;
     // },
-    get getName(){
-      return private["_name"];
+
+    //sustituye readName y changeName
+    get name(){
+      // return private["_name"];
+      return private._name;
     },
-    set setName(newName){
-      if(newName.lengtn =! 0)
-      return private["_name"];
+    set name(newName){
+      if(newName.length != 0){
+        // private["_name"] = newName;
+        private._name = newName;
+      }else{
+        console.warn("Tu nombre deve tener al menos 1 caracter")
+      }
     },
   };
 
