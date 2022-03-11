@@ -42,14 +42,14 @@ function createStudent({
     },
   };
 
-  Object.defineProperty(public, "readName", {
-    writable: false,
-    configurable: false,
-  });
-  Object.defineProperty(public, "changeName", {
-    writable: false,
-    configurable: false,
-  });
+  // Object.defineProperty(public, "readName", {
+  //   writable: false,
+  //   configurable: false,
+  // });
+  // Object.defineProperty(public, "changeName", {
+  //   writable: false,
+  //   configurable: false,
+  // });
 
   return public;
 }
