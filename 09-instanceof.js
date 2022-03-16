@@ -79,7 +79,7 @@ function Student({
   this.name = name;
   this.email = email;
   this.age = age;
-  this.approvedCourses = [],
+  this.approvedCourses = approvedCourses,
   this.socialMedia = {
     twitter,
     instagram,
