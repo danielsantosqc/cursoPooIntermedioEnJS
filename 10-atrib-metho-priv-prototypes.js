@@ -1,4 +1,4 @@
-// instanceof
+// Atributos y métodos privados en prototipos
 
 // ------deepCopy--- init here 
 function typeOfElement (element){
@@ -57,7 +57,7 @@ function Student({
   this.name = name;
   this.email = email;
   this.age = age;
-  this.approvedCourses = [],
+  this.approvedCourses = approvedCourses,
   this.socialMedia = {
     twitter,
     instagram,
@@ -82,6 +82,13 @@ function Student({
   }
   
 }
+Object.defineProperties(Student.prototype, "learningPaths",{
+  get (){
+
+  }
+  set()
+});
+
 
 const escuelaWeb = new LearningPath({name : "Escuela de WebDev"});
 const escuelaWeb2 ={name : "Escuela de WebDev falso"};
