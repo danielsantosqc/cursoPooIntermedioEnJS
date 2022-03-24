@@ -95,7 +95,7 @@ function Student({
         this.learningPaths.push(iteratorLearnigPath)
       }
       // else{
-      //   console.log('no es una instancia del LearningPaths');
+      //   console.log('no es una instancia del LearningPath');
       // } 
     }
   }else{
