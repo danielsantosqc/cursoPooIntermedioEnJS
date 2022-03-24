@@ -28,10 +28,10 @@ function deepCopy(element) {
 }
 // --------------end here---------------- 
 
+
 function requiredParam(param) {
   throw new Error(param + " es obligatorio");
 }
-
 
 function LearningPath({
   name = requiredParam("name"),
@@ -63,36 +63,44 @@ function Student({
     instagram,
     facebook,
   }
+
+  const private = {
+    _learningPaths: [],
+  };
+
+  Object.defineProperty(this, "learningPaths",{
+    get (){
+      return private._learningPaths;
+    },
+    set(newLp){
+      if(newLp instanceof LearningPath) {
+        private._learningPaths.push(newLp);
+      }
+      else{
+        console.warn(newLp, 'no es una instancia del Prototipo LearningPath');
+      }     
+    },
+  });
+
   
   if(Array.isArray(learningPaths)){
-    this.learningPaths = [];
+    this._learningPaths = [];
     for (let iteratorLearnigPath of learningPaths) {
-      console.log(iteratorLearnigPath, );
-      console.log(iteratorLearnigPath instanceof LearningPath );
-      if(iteratorLearnigPath instanceof LearningPath) {
-        this.learningPaths.push(iteratorLearnigPath)
-      }
-      // else{
-      //   console.log('no es una instancia del LearningPaths');
-      // } 
+      this.learningPaths = iteratorLearnigPath;
     }
   }else{
-    console.log("LearningPath is not an array/ no es un array");
+    console.warn("LearningPath is not an array/ no es un array");
     return;
-  }
-  
+  }  
 }
-Object.defineProperties(Student.prototype, "learningPaths",{
-  get (){
 
-  }
-  set()
-});
+
 
 
 const escuelaWeb = new LearningPath({name : "Escuela de WebDev"});
 const escuelaWeb2 ={name : "Escuela de WebDev falso"};
 const escuelaData = new LearningPath({name: "Escuela de Data"});
+
 const juan = new Student({ 
   email: "juanito@frijoles.co", 
   name: "Juanito",
